@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
     Button,
+    Image,
     ImageBackground,
     Modal,
     StyleSheet,
@@ -39,6 +40,7 @@ export default function GoalInput(props) {
           source={require("../../assets/img/goals.jpg")}
         >
           <View style={styles.inputContainer}>
+            <Image source={require('../../assets/img/goal.png')} style={styles.goalImg} />
             <TextInput
               style={styles.textInput}
               placeholder="Add List Item"
@@ -79,6 +81,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     height: "100%",
     flex: 1,
+    marginTop: -100
+  },
+  goalImg: {
+    height: 200,
+    width: 200,
+    marginBottom: 30
   },
   textInput: {
     width: "100%",
